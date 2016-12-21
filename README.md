@@ -1,4 +1,4 @@
-# Karma-nightmare-angular-demo
+# karma-nightmare-angular-demo
 A working demonstration for visual regression testing of Angular application. 
 
 This demo uses the following:
