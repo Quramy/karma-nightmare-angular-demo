@@ -1,0 +1,12 @@
+<md-card>
+   <md-card-header>
+      <img md-card-avatar [src]="avatarURL">
+      <md-card-title>{{headerTitle}}</md-card-title>
+      <md-card-subtitle *ngIf="subtitle">{{subtitle}}</md-card-subtitle>
+   </md-card-header>
+   <img md-card-image [src]="pictureURL">
+   <md-card-content *ngIf="description">
+      <p>{{description}}</p>
+   </md-card-content>
+</md-card>
+
