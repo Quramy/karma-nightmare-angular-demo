@@ -2,6 +2,7 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { screenshot } from 'karma-nightmare';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -29,5 +30,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    screenshot('snapshot/app_works.png');
   }));
 });
+

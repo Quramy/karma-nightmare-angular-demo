@@ -44,6 +44,7 @@ module.exports = function (config) {
       width: 800,
       height: 600,
       show: true,
+      alwaysOnTop: false,
     }
   });
 };
