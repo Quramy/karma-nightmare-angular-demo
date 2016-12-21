@@ -13,8 +13,8 @@ module.exports = function (config) {
       require('angular-cli/plugins/karma')
     ],
     files: [
-      { pattern: 'node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css', watched: false, included: true, served: true, nocache: false},
-      { pattern: './src/assets/*.{png,jpg,svg}', watched: false, included: false, served: true, nocache: false},
+      { pattern: './src/assets/*.{png,jpg,svg}', watched: false, included: false, served: true, nocache: false },
+      { pattern: 'node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css', watched: false, included: true, served: true, nocache: false },
       { pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {

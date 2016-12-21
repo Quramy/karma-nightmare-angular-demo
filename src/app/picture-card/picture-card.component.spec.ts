@@ -32,7 +32,11 @@ describe('PictureCardComponent', () => {
     fixture.detectChanges();
     const titleElm = fixture.debugElement.query(By.css('md-card-title')).nativeElement as HTMLElement;
     expect(titleElm.textContent.trim()).toBe('It\'s my favorite picture');
-    screenshot('snapshot/PictureCardComponent.png').then(done);
+    const pictElm = fixture.debugElement.query(By.css('img[md-card-image]')).nativeElement as HTMLImageElement;
+    expect(pictElm).toBeTruthy();
+    pictElm.onload = () => {
+      screenshot('snapshot/PictureCardComponent.png').then(done);
+    };
   });
 });
 
