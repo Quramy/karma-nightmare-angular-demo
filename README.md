@@ -18,6 +18,11 @@ ng test
 
 So .png files are generated into the `snapshot` directory.
 
+And execute the following, reg-cli compares between the `snapshot` dir and the `expected` dir. It outputs a HTML report to `dist/reg_report.html`.
+
+```sh
+npm run reg
+```
 
 ## License
 MIT License
