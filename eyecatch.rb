@@ -7,5 +7,7 @@ before_build {
   run 'ndenv global v6.9.1'
   run 'curl -o- -L https://yarnpkg.com/install.sh | bash'
   run 'export PATH="$HOME/.yarn/bin:$PATH"'
-  run 'yarn install'
+  run 'ls $HOME/.yarn'
+  run 'ls $HOME/.yarn/bin'
+  run './$HOME/.yarn/bin install'
 }
