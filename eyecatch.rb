@@ -1,4 +1,4 @@
-serve 'ng build && http-server -p 8080'
+serve 'ng build && cd dist && http-server -p 8080'
 port 8080
 
 before_build {
@@ -6,8 +6,5 @@ before_build {
   run 'ndenv rehash'
   run 'ndenv global v6.9.1'
   run 'curl -o- -L https://yarnpkg.com/install.sh | bash'
-  run 'export PATH="$HOME/.yarn/bin:$PATH"'
-  run 'ls $HOME/.yarn'
-  run 'ls $HOME/.yarn/bin'
-  run '$HOME/.yarn/bin/yarn install'
+  run 'npm install'
 }
