@@ -9,5 +9,5 @@ before_build {
   run 'export PATH="$HOME/.yarn/bin:$PATH"'
   run 'ls $HOME/.yarn'
   run 'ls $HOME/.yarn/bin'
-  run './$HOME/.yarn/bin/yarn install'
+  run '$HOME/.yarn/bin/yarn install'
 }
