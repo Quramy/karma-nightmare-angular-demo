@@ -11,6 +11,14 @@ describe('PictureCardComponent', () => {
   let component: PictureCardComponent;
   let fixture: ComponentFixture<PictureCardComponent>;
 
+  const waitImg = (elm: HTMLImageElement) => {
+    if (elm.complete) {
+      return Promise.resolve();
+    } else {
+      return new Promise(res => elm.addEventListener('load', () => res()));
+    }
+  };
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ MaterialModule.forRoot() ],
@@ -34,9 +42,7 @@ describe('PictureCardComponent', () => {
     expect(titleElm.textContent.trim()).toBe('It\'s my favorite picture');
     const pictElm = fixture.debugElement.query(By.css('img[md-card-image]')).nativeElement as HTMLImageElement;
     expect(pictElm).toBeTruthy();
-    pictElm.onload = () => {
-      screenshot('snapshot/PictureCardComponent.png').then(done);
-    };
+    waitImg(pictElm).then(() => screenshot('snapshot/PictureCardComponent.png')).then(done);
   });
 });
 
