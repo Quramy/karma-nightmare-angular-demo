@@ -1,4 +1,6 @@
 # karma-nightmare-angular-demo
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Quramy/karma-nightmare-angular-demo.svg)](https://greenkeeper.io/)
 A working demonstration for visual regression testing of Angular application. 
 
 This demo uses the following:
